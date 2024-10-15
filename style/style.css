@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #d6e6f2; /* Light blue background */
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.column-left, .column-right {
+    width: 20%;
+}
+.column-right {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.text-area {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.text-area p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%; /* Center the menu vertically */
+    right: -120px; /* Position the menu slightly off-screen */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition for position and opacity */
+}
+
+
+.menu:hover {
+    right: 0; /* Move the menu into full view when hovered */
+}
+
+.menu button {
+    background: transparent;
+    border: 1px solid black;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+.menu button:hover {
+    background: #000000;
+    color: white;
+}
+
+.menu button.active {
+    background: #000000;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icon-left, .icon-right {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+.icon-right {
+    width: 40px;;
+}
+
+.icon1 {
+    width: 40%;
+    height: auto;
+}
+
+.pajaro {
+    width: 25%;
+    margin-top: 20px;
+    margin-left: 60%;
+}

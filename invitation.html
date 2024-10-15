@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABTSB</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="column column-left">
+            <img src="icon/corner.png" alt="corner" class="icon1">
+        </div>
+        <div class="column text-area">
+            <!-- Invitation in Spanish by default -->
+            <p id="invitation-text" class="invitation" style="max-height: 70%; overflow-y: auto;">
+                TABTSB es una invitación a publicarte, <br>
+                a dejar que tus palabras sean libres,<br>
+                observables y deseadas.<br>
+
+                <br>
+
+                puedes transcribirlas en tus páginas, <br>
+                escribirnos las tuyas propias, <br>
+                compartir las que te gustan<br>
+                o enviarnos un correo con tu escrito, <br>
+                siempre y cuando entiendas que nuestro propósito <br>
+                no busca el reconocimiento de autor, <br>
+                más bien, de las palabras en sí, y su autonomía. <br>
+
+                <br>
+                si te reconoces con nuestro manifiesto,<br>
+                si te gusta el proyecto, robalo,<br>
+                hazlo propio, en tu corazón y tu memoria, <br>
+                pero recuerda que pertenece al tránsito,<br>
+                a la gente, no a tu codicia. <br>
+                <br>
+                habla sobre esto, con quien este a tu lado, <br>
+                con tus amistades, colegas y familia, <br>
+                con nosotros.<br>
+
+                <br>
+                Compártelo y compártenos tu sentir, <br>
+                sus palabras, la forma de tus ideas.<br>
+                tómale fotos, <br>
+                difunde su mito, <br>
+                hazte amigo de estas ventanas, <br>
+                di que le conoces.<br>
+                <br>
+                pero recuerda.<br>
+                <br>
+                TABTSB es un libro abierto y libre, no lo encierres en tu librería.<br>
+            </p>
+
+            <div style="margin-top: 10px;">
+                <!-- <label for="language-switch">Read in: </label> -->
+                <select id="language-switch" onchange="switchLanguage()">
+                    <option value="es">Esp</option>
+                    <option value="en">Eng</option>
+                </select>
+            </div>
+        </div>
+        <div class="column column-right">
+            <img class="pajaro" src="icon/pajaro.png" alt="Right Column Image">
+            <div class="menu">
+                <button onclick="location.href='index.html'">POEM</button>
+                <button onclick="location.href='manifesto.html'">MANIFESTO</button>
+                <button onclick="location.href='invitation.html'">INVITATION</button>
+                <button onclick="location.href='mail.html'">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Texts in both languages
+        const spanishText = `TABTSB es una invitación a publicarte, <br>
+        a dejar que tus palabras sean libres,<br>
+        observables y deseadas.<br>
+        <br>
+        puedes transcribirlas en tus páginas, <br>
+        escribirnos las tuyas propias, <br>
+        compartir las que te gustan<br>
+        o enviarnos un correo con tu escrito, <br>
+        siempre y cuando entiendas que nuestro propósito <br>
+        no busca el reconocimiento de autor, <br>
+        más bien, de las palabras en sí, y su autonomía. <br>
+        <br>
+        si te reconoces con nuestro manifiesto,<br>
+        si te gusta el proyecto, robalo,<br>
+        hazlo propio, en tu corazón y tu memoria, <br>
+        pero recuerda que pertenece al tránsito,<br>
+        a la gente, no a tu codicia. <br>
+        <br>
+        habla sobre esto, con quien este a tu lado, <br>
+        con tus amistades, colegas y familia, <br>
+        con nosotros.<br>
+        <br>
+        Compártelo y compártenos tu sentir, <br>
+        sus palabras, la forma de tus ideas.<br>
+        tómale fotos, <br>
+        difunde su mito, <br>
+        hazte amigo de estas ventanas, <br>
+        di que le conoces.<br>
+        <br>
+        pero recuerda.<br>
+        <br>
+        TABTSB es un libro abierto y libre, no lo encierres en tu librería.<br>`;
+
+        const englishText = `TABTSB is an invitation to publish yourself, <br>
+        to let your words be free,<br>
+        observable and desired.<br>
+        <br>
+        You can write them in its pages, <br>
+        write to us if you find us, <br>
+        or send us an email with your writing, <br>
+        as long as you understand our purpose <br>
+        and recognize yourself with our manifesto.<br>
+        <br>
+        If you like the project, steal it, <br>
+        but remember that it belongs to the transit, <br>
+        to the people, not to your greed.<br>
+        <br>
+        Talk about it, with whoever is at your side, <br>
+        with your friends, colleagues and family, <br>
+        with us.<br>
+        <br>
+        Share it and share with us your feelings, <br>
+        their words, the shape of your ideas.<br>
+        Take pictures of it, <br>
+        spread its myth, <br>
+        make friends with this book, <br>
+        say you know it.<br>
+        <br>
+        But remember.<br>
+        <br>
+        TABTSB is an open and free book, <br>
+        don't lock it in your bookstore.<br>`;
+
+        function switchLanguage() {
+            const invitationElement = document.getElementById('invitation-text');
+            const language = document.getElementById('language-switch').value;
+            if (language === 'es') {
+                invitationElement.innerHTML = spanishText;
+            } else if (language === 'en') {
+                invitationElement.innerHTML = englishText;
+            }
+        }
+    </script>
+</body>
+
+</html>

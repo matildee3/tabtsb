@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABTSB - Subscribe</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column column-left">
+            <img src="icon/corner.png" alt="corner" class="icon1">
+        </div>
+        <div class="column text-area">
+            <h1>Subscribe to our Mailing List</h1>
+            <form id="subscribe-form">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+                <p id="message" style="display: none;"></p>
+            </form>
+            <a href="#" id="unsubscribe-link" style="display: block; margin-top: 20px; font-size: 0.9em;">Unsubscribe</a>
+
+            <!-- Unsubscribe popup -->
+            <div id="unsubscribe-popup" class="popup" style="display: none;">
+                <h2>Unsubscribe</h2>
+                <form id="unsubscribe-form">
+                    <input type="email" name="unsubscribe-email" placeholder="Your Email" required>
+                    <button type="submit">Unsubscribe</button>
+                    <button type="button" id="cancel-unsubscribe">Cancel</button>
+                </form>
+                <p id="unsubscribe-message" style="display: none;"></p>
+            </div>
+        </div>
+        <div class="column column-right">
+            <img class="pajaro" src="icon/pajaro.png" alt="Right Column Image">
+            <div class="menu">
+                <button onclick="location.href='index.html'">POEM</button>
+                <button onclick="location.href='manifesto.html'">MANIFESTO</button>
+                <button onclick="location.href='invitation.html'">INVITATION</button>
+                <button onclick="location.href='mail.html'">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

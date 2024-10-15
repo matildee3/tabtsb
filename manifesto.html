@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABTSB</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="column column-left">
+            <img src="icon/corner.png" alt="corner" class="icon1">
+        </div>
+        <div class="column text-area">
+            <!-- Manifesto in Spanish -->
+            <p id="manifesto-text" class="manifesto" style="max-height: 70%; overflow-y: auto;">
+                somos y soy,<br>
+                independencia en movimiento,<br>
+                un manto creativo, una red de palabras,<br>
+                poesía difundida y contemporánea,<br>
+                letras y páginas robadas,<br>
+                en contra del consumismo y su sociedad desatenta,<br>
+                versos que enfrentan las cabezas despistadas,<br>
+                inclinadas ante reflejos y corazones falsos.<br>
+                <br>
+                somos y soy,<br>
+                un organismo vivo y latente,<br>
+                el desarrollo de un bosque de ideas y sentimientos,<br>
+                que crece con las entregadas por sus soñadores,<br>
+                por creadores y militantes,<br>
+                una multitud heterogénea de libreas poetas.<br>
+                <br>
+                no nombramos, llamamos<br>
+                no criticamos, declaramos,<br>
+                no seleccionamos, probamos,<br>
+                no censuramos, publicamos,<br>
+                no poseemos, liberamos.<br>
+                <br>
+                elegimos estas vías como nuestro hogar,<br>
+                pues no somos resultado,<br>
+                somos posibilidad,<br>
+                de devolver las palabras,<br>
+                su poética,<br>
+                al pueblo, a sus calles y plazas.<br>
+                <br>
+                anonimato a sus autores,<br>
+                de manera que la poesía<br>
+                sea lo que esté por encima de todo.
+            </p>
+
+            <!-- Language switcher -->
+            <div style="margin-top: 10px;">
+                <!-- <label for="language-switch">Read in: </label> -->
+                <select id="language-switch" onchange="switchLanguage()">
+                    <option value="es">Esp</option>
+                    <option value="en">Eng</option>
+                </select>
+            </div>
+        </div>
+        <div class="column column-right">
+            <img class="pajaro" src="icon/pajaro.png" alt="Right Column Image">
+            <div class="menu">
+                <button onclick="location.href='index.html'">POEM</button>
+                <button onclick="location.href='manifesto.html'">MANIFESTO</button>
+                <button onclick="location.href='invitation.html'">INVITATION</button>
+                <button onclick="location.href='mail.html'">SUBSCRIBE</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        // Manifesto text in both languages
+        const spanishText = `somos y soy,<br>
+        independencia en movimiento,<br>
+        un manto creativo, una red de palabras,<br>
+        poesía difundida y contemporánea,<br>
+        letras y páginas robadas,<br>
+        en contra del consumismo y su sociedad desatenta,<br>
+        versos que enfrentan las cabezas despistadas,<br>
+        inclinadas ante reflejos y corazones falsos.<br>
+        <br>
+        somos y soy,<br>
+        un organismo vivo y latente,<br>
+        el desarrollo de un bosque de ideas y sentimientos,<br>
+        que crece con las entregadas por sus soñadores,<br>
+        por creadores y militantes,<br>
+        una multitud heterogénea de libreas poetas.<br>
+        <br>
+        no nombramos, llamamos<br>
+        no criticamos, declaramos,<br>
+        no seleccionamos, probamos,<br>
+        no censuramos, publicamos,<br>
+        no poseemos, liberamos.<br>
+        <br>
+        elegimos estas vías como nuestro hogar,<br>
+        pues no somos resultado,<br>
+        somos posibilidad,<br>
+        de devolver las palabras,<br>
+        su poética,<br>
+        al pueblo, a sus calles y plazas.<br>
+        <br>
+        anonimato a sus autores,<br>
+        de manera que la poesía<br>
+        sea lo que esté por encima de todo.`;
+
+        const englishText = `we are and I am,<br>
+        independence in movement,<br>
+        a creative mantle, a network of words,<br>
+        diffused and contemporary poetry,<br>
+        stolen letters and pages,<br>
+        against consumerism and its inattentive society,<br>
+        verses that confront the clueless heads,<br>
+        bowed before false hearts and reflections.<br>
+        <br>
+        we are and I am,<br>
+        a living and latent organism,<br>
+        the development of a forest of ideas and feelings,<br>
+        that grows with those delivered by its dreamers,<br>
+        by creators and militants,<br>
+        a heterogeneous multitude of poetic liveries.<br>
+        <br>
+        we do not name, we call<br>
+        we do not criticize, we declare,<br>
+        we do not select, we test,<br>
+        we do not censor, we publish,<br>
+        we do not own, we liberate.<br>
+        <br>
+        we choose these ways as our home,<br>
+        for we are not a result,<br>
+        of giving back the words.<br>
+        their poetics,<br>
+        to the people, to their streets and squares.<br>
+        <br>
+        anonymity to their authors,<br>
+        so that poetry above all else.`;
+
+        // Function to switch between languages
+        function switchLanguage() {
+            const manifestoElement = document.getElementById('manifesto-text');
+            const language = document.getElementById('language-switch').value;
+            if (language === 'es') {
+                manifestoElement.innerHTML = spanishText;
+            } else if (language === 'en') {
+                manifestoElement.innerHTML = englishText;
+            }
+        }
+    </script>
+</body>
+</html>
