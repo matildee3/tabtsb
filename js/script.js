@@ -51,6 +51,7 @@ if (form) {
         // Use the full URL of your backend on Heroku
         fetch('https://tab-back-8ececcb7cf1e.herokuapp.com/subscribe', {
             method: 'POST',
+            mode: "cors",
             headers: {
                 'Content-Type': 'application/json',
             },
